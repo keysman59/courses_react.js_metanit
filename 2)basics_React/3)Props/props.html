@@ -11,7 +11,9 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
     <script type="text/babel">
+    	let here = "hidfs";
         class Hello extends React.Component {
+        	
             render() {
               return <div>
                           <p>Имя: {this.props.name}</p>
@@ -20,7 +22,11 @@
             }
           }
           ReactDOM.render(
-              <Hello name="Tom" age="33" />,
+          	<div>
+              <Hello name={here} age="33" />
+              <Hello name="Tin" age="23" />
+              <Hello name="Tokko" age="13" />
+            </div>,
               document.getElementById("app")
           )
     </script>
